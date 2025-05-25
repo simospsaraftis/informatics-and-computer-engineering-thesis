@@ -5,3 +5,6 @@ Thesis Title: Usage of Machine Learning Techniques for Medical Image Analysis in
 Information about the installation can be found in [INSTALL](./INSTALL.md)
 
 
+## Citation
+
+Pavel Iakubovskii. *Segmentation Models*. GitHub repository, 2019. Available at: [https://github.com/qubvel/segmentation_models](https://github.com/qubvel/segmentation_models)
