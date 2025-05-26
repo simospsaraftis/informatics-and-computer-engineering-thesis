@@ -1,1 +1,1 @@
-Add your CT images in this folder
+Add your chest CT images here.
