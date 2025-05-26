@@ -44,8 +44,6 @@ HORIZONTAL_FLIP = True  # Allow horizontal flipping during augmentation
 
 VERTICAL_FLIP = False  # Disable vertical flipping during augmentation
 
-PROBABILITY = 0.5  # Probability threshold for applying random transformations
-
 SEED = 42  # Random seed for reproducibility
 
 FOLDNO = 0  # Current fold number (used in 5-fold cross-validation)
