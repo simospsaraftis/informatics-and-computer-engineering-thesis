@@ -58,7 +58,7 @@ SEGMENTED = 'Segmented'  # Label for processed segmentation data
 
 # Paths
 
-OUTPUT_PATH = 'outputs/'  # Path to store training outputs, metrics, and models
+OUTPUT_PATH = 'output/'  # Path to store training outputs, metrics, and models
 
 IMAGE_PATH = 'data/images/'  # Path to input image files
 
