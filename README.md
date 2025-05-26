@@ -31,7 +31,7 @@ Install the required packages:
 ```
 pip install -r requirements.txt
 ```
-
+<br><br>
 - `segmentation/data/images` Add your input CT scan images here.
 - `segmentation/data/masks` Add the corresponding CT scan masks here.
 </br></br>
