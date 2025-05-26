@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 For this thesis the dataset created by [2] was employed. It can be downloaded from here: [COVID-19 CT Lung and Infection Segmentation Dataset](https://zenodo.org/records/3757476)
 
-Your dataset should be added here:
+The dataset should be added here:
 
 - `segmentation/data/images` Add your input CT scan images here.
 - `segmentation/data/masks` Add the corresponding CT scan masks here.
