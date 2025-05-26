@@ -58,8 +58,8 @@ SEGMENTED = 'Segmented'  # Label for processed segmentation data
 
 # Paths
 
-OUTPUT_PATH = 'output/'  # Path to store training outputs, metrics, and models
+OUTPUT_PATH = 'segmentation/output/'  # Path to store training outputs, metrics, and models
 
-IMAGE_PATH = 'data/images/'  # Path to input image files
+IMAGE_PATH = 'segmentation/data/images/'  # Path to input image files
 
-MASK_PATH = 'data/masks/'  # Path to corresponding ground truth mask files
+MASK_PATH = 'segmentation/data/masks/'  # Path to corresponding ground truth mask files
