@@ -14,7 +14,7 @@ BATCH_SIZE = 32  # Batch size during training
 
 CLASSES = 1  # Number of output segmentation classes
 
-EPOCHS = 2  # Number of training epochs
+EPOCHS = 200  # Number of training epochs
 
 ACTIVATION = 'sigmoid'  # Final activation function for model output
 
