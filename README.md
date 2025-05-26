@@ -32,11 +32,17 @@ Install the required packages:
 pip install -r requirements.txt
 ```
 
-- `data/images` Add your input CT scan images here.
-- `data/masks` Add the corresponding CT scan masks here.
-- `models/` Trained models will be saved here.
+- `segmentation/data/images` Add your input CT scan images here.
+- `segmentation/data/masks` Add the corresponding CT scan masks here.
+</br></br>
+
+## Dataset Used
+
+For this thesis the dataset created by [2] was employed. It can be downloaded from here: [COVID-19 CT Lung and Infection Segmentation Dataset](https://zenodo.org/records/3757476)
 
 </br></br>
 ## References
 
 [1] Pavel Iakubovskii. *Segmentation Models*. GitHub repository, 2019. Available at: [https://github.com/qubvel/segmentation_models](https://github.com/qubvel/segmentation_models)
+
+[2] Ma, J., Wang, Y., An, X., Ge, C., Yu, Z., Chen, J., Zhu, Q., Dong, G., He, J., He, Z., Cao, T., Zhu, Y., Nie, Z., & Yang, X. (2021). Towards Data-Efficient Learning: A Benchmark for COVID-19 CT Lung and Infection Segmentation. *Medical Physics*, 48(3), 1197–1210. https://doi.org/10.1002/mp.14676
