@@ -31,6 +31,11 @@ Install the required packages:
 ```
 pip install -r requirements.txt
 ```
+
+- `data/images` Add your input CT scan images here.
+- `data/masks` Add the corresponding CT scan masks here.
+- `models/` Trained models will be saved here.
+
 </br></br>
 ## References
 
