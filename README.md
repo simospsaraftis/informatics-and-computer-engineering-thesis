@@ -4,8 +4,8 @@ Thesis Title: Usage of Machine Learning Techniques for Medical Image Analysis in
 
 ##Description
 
-This repository contains code developed for my diploma thesis: Usage of Machine Learning Techniques for Medical Image Analysis in Order to  Assist in the Diagnosis of COVID-19 Infection.
-Information about the installation can be found in [INSTALL](./INSTALL.md)
+This repository contains code developed for my diploma thesis: Usage of Machine Learning Techniques for Medical Image Analysis in Order to  Assist in the Diagnosis of COVID-19 Infection.</br></br>
+Information about the installation can be found in [INSTALL](./INSTALL.md)</br></br>
 
 ## References
 
