@@ -16,12 +16,20 @@ The following three models were trained utilizing code found in [1]:
 
 ## Installation
 
+Clone the repository:
+
 ```
 git clone https://github.com/simospsaraftis/informatics-and-computer-engineering-thesis.git
 cd informatics-and-computer-engineering-thesis
 
 ```
 
+Install the required packages:
+
+```
+pip install -r requirements.txt
+
+```
 
 ## References
 
