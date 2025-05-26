@@ -5,6 +5,9 @@ Thesis Title: Usage of Machine Learning Techniques for Medical Image Analysis in
 ## Description
 
 This repository contains code developed for my diploma thesis: "Usage of Machine Learning Techniques for Medical Image Analysis in Order to Assist in the Diagnosis of COVID-19 Infection."
+</br></br>
+
+## Segmentation Task
 
 The code trains convolutional neural networks (CNNs) to segment COVID-19-related lesions in chest CT scans, supporting automated analysis and diagnosis.
 
