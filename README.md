@@ -10,8 +10,9 @@ This repository contains code developed for my diploma thesis: "Usage of Machine
 ## Segmentation Task
 
 The code trains convolutional neural networks (CNNs) to segment COVID-19-related lesions in chest CT scans, supporting automated analysis and diagnosis.
+</br></br>
 
-## Models Trained
+### Models Trained
 
 The following three models were trained utilizing code found in [1]:
 
@@ -20,7 +21,7 @@ The following three models were trained utilizing code found in [1]:
 - U-Net with DenseNet121 as backbone
 </br></br>
 
-## Installation
+### Installation
 
 Clone the repository:
 
@@ -36,7 +37,7 @@ pip install -r requirements.txt
 ```
 </br></br>
 
-## Dataset Used
+### Dataset Used
 
 For this thesis the dataset created by [2] was employed. It can be downloaded from here: [COVID-19 CT Lung and Infection Segmentation Dataset](https://zenodo.org/records/3757476)
 
@@ -46,7 +47,7 @@ The dataset should be added here:
 - `segmentation/data/masks` Add the corresponding CT scan masks here.
 </br></br>
 
-## References
+### References
 
 [1] Pavel Iakubovskii. *Segmentation Models*. GitHub repository, 2019. Available at: [https://github.com/qubvel/segmentation_models](https://github.com/qubvel/segmentation_models)
 
