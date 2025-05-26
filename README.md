@@ -31,6 +31,11 @@ Install the required packages:
 ```
 pip install -r requirements.txt
 ```
+</br></br>
+
+## Dataset Used
+
+For this thesis the dataset created by [2] was employed. It can be downloaded from here: [COVID-19 CT Lung and Infection Segmentation Dataset](https://zenodo.org/records/3757476)
 
 Your dataset should be added here:
 
@@ -38,11 +43,6 @@ Your dataset should be added here:
 - `segmentation/data/masks` Add the corresponding CT scan masks here.
 </br></br>
 
-## Dataset Used
-
-For this thesis the dataset created by [2] was employed. It can be downloaded from here: [COVID-19 CT Lung and Infection Segmentation Dataset](https://zenodo.org/records/3757476)
-
-</br></br>
 ## References
 
 [1] Pavel Iakubovskii. *Segmentation Models*. GitHub repository, 2019. Available at: [https://github.com/qubvel/segmentation_models](https://github.com/qubvel/segmentation_models)
