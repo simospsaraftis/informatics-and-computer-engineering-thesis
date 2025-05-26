@@ -13,6 +13,7 @@ The following three models were trained utilizing code found in [1]:
 - U-Net
 - U-Net with VGG16 as backbone
 - U-Net with DenseNet121 as backbone
+</br></br>
 
 ## Installation
 
@@ -28,7 +29,7 @@ Install the required packages:
 ```
 pip install -r requirements.txt
 ```
-
+</br></br>
 ## References
 
 [1] Pavel Iakubovskii. *Segmentation Models*. GitHub repository, 2019. Available at: [https://github.com/qubvel/segmentation_models](https://github.com/qubvel/segmentation_models)
