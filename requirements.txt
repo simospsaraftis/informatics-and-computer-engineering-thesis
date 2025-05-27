@@ -1,0 +1,10 @@
+tensorflow==2.15.0
+segmentation-models
+scikit-learn
+numpy
+matplotlib
+pandas
+opencv-python
+openpyxl
+seaborn
+scipy==1.11.4
