@@ -6,3 +6,5 @@ matplotlib
 pandas
 opencv-python
 openpyxl
+seaborn
+scipy==1.11.4
