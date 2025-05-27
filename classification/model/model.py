@@ -37,16 +37,6 @@ def train_model(model, train_gen, val_gen, path, model_name, foldno, save_best_o
     return history
 
 # Evaluate the trained model on validation/test data and return predictions
-def evaluate_model(model, path, model_name, foldno, generator):
-    # Load the best model weights saved during training
-    model.load_weights(path + model_name + '/models/model_' + str(foldno) + '.keras')
-
-    # Run inference on the given input data (X)
-    val_loss, val_acc = model.evaluate(generator)
-
-    return val_loss, val_acc
-
-# Evaluate the trained model on validation/test data and return predictions
 def predict_images(model, path, model_name, foldno, generator):
 
     Y_pred = model.predict(generator)
