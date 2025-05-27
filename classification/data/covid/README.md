@@ -1,1 +1,1 @@
-Add covid-19 images here.
+Add chest CT images from individuals with COVID-19 here.
