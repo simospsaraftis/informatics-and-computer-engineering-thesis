@@ -24,7 +24,7 @@ The following three models were trained:
 
 ### Dataset Used for Classification Task
 
-For this thesis the dataset created by [1] was employed. It can be downloaded from here: [COVID-CT-MD: COVID-19 Computed Tomography (CT) Scan Dataset Applicable in Machine Learning and Deep Learning]([https://zenodo.org/records/3757476](https://figshare.com/collections/COVID-CT-MD_COVID-19_Computed_Tomography_CT_Scan_Dataset_Applicable_in_Machine_Learning_and_Deep_Learning/5129081))
+For this thesis the dataset created by [1] was employed. It can be downloaded from here: [COVID-CT-MD: COVID-19 Computed Tomography (CT) Scan Dataset Applicable in Machine Learning and Deep Learning](https://figshare.com/collections/COVID-CT-MD_COVID-19_Computed_Tomography_CT_Scan_Dataset_Applicable_in_Machine_Learning_and_Deep_Learning/5129081)
 
 The dataset should be added here:
 
