@@ -28,8 +28,9 @@ For this thesis the dataset created by [1] was employed. It can be downloaded fr
 
 The dataset should be added here:
 
-- `segmentation/data/images` Add your input CT scan images here.
-- `segmentation/data/masks` Add the corresponding CT scan masks here.
+- `clasification/data/covid` Add CT scans corresponding to patients with COVID-19.
+- `clasification/data/normal` Add CT scans corresponding to healthy individuals.
+- `clasification/data/pneu` Add CT scans corresponding to patients with Viral Pneumonia caused by other viruses.
 </br></br>
 
 ## Segmentation Task
