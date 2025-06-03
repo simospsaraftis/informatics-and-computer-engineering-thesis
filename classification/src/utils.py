@@ -325,6 +325,6 @@ def plot_roc_curve(generator, prob, foldno, model_name, output_path, mode):
         plt.title('Receiver Operating Characteristic for ' + model_name + " \n Fold " + str(foldno))
         plt.legend(loc="lower right")
         plt.savefig(
-            output_path + model_name + '/' + mode + '/roc_curve/validation_roc_curve' + str(foldno) + '.png')
+            output_path + model_name + '/' + mode + '/roc_curve/roc_curve' + str(foldno) + '.png')
         plt.show()
         plt.close()
