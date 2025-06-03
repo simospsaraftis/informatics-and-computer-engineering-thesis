@@ -3,7 +3,7 @@ import pandas as pd
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from sklearn.model_selection import KFold
 
-# Load images and masks and organize them by dataset source
+# Load images
 def create_lists(covid_path, normal_path, pneu_path, covid_class, normal_class, pneu_class):
 
     covidlist = os.listdir(covid_path)
@@ -32,6 +32,23 @@ def create_lists(covid_path, normal_path, pneu_path, covid_class, normal_class, 
     final_normal_df['images'] = final_normal_df['images'].str.replace(r'_', '-', regex=True)
 
     return final_covid_df, final_normal_df, covid_pat_unique, normal_pat_unique
+
+# Load test images
+def create_test_lists(covid_path, normal_path, pneu_path, covid_class, normal_class, pneu_class):
+
+    covidlist = os.listdir(covid_path)
+    covidlist.sort()
+
+    normallist = os.listdir(normal_path)
+    normallist.sort()
+
+    covid_df = pd.DataFrame({'images': covidlist, 'target': covid_class})
+    covid_df['image_path'] = covid_path + covid_df['images']
+
+    normal_df = pd.DataFrame({'images': normallist, 'target': normal_class})
+    normal_df['image_path'] = normal_path + normal_df['images']
+
+    return covid_df, normal_df
 
 # Create an ImageDataGenerator instance for training or evaluation
 def create_augmentation_generator(rotation_range, width_shift_range, height_shift_range, horizontal_flip, mode):
