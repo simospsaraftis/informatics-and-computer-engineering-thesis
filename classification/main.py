@@ -10,7 +10,7 @@ def main():
     make_dirs(config.OUTPUT_PATH, config.MODEL_NAME)
 
     # Get organized DataFrames for different dataset classes
-    covid_df, normal_df, covid_pat_unique, normal_pat_unique = create_lists(config.COVID_PATH,config.NORMAL_PATH, config.PNEU_PATH, config.COVID_CLASS, config.NORMAL_CLASS, config.PNEU_CLASS)
+    covid_df, normal_df, covid_pat_unique, normal_pat_unique = create_lists(config.TRAIN_COVID_PATH,config.TRAIN_NORMAL_PATH, config.TRAIN_PNEU_PATH, config.COVID_CLASS, config.NORMAL_CLASS, config.PNEU_CLASS)
 
     # Perform K-Fold split on covid images
     train_covid_folds, valid_covid_folds = split_data(covid_pat_unique, config.N_SPLITS, config.SEED)
