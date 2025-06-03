@@ -26,7 +26,7 @@ def make_dirs(path, model_name):
 
 # Save training metrics, validation metrics, training history, and hyperparameters
 def save_metrics(generator, y_pred, history, foldno, path, model_name, n_splits, img_size, channels, lr, batch_size, classes, class_mode, epochs,
-                       activation, actf, crossentropy, optimizer, backbone, rescale, augmentation,
+                       activation, actf, crossentropy, optimizer, rescale, augmentation,
                        rotation_range, height_shift_range, width_shift_range, horizontal_flip,
                        normalized, split, segmented):
 
@@ -52,12 +52,12 @@ def save_metrics(generator, y_pred, history, foldno, path, model_name, n_splits,
 
     # Store all model hyperparameters in a single Excel sheet
     hyperparameters = pd.DataFrame([[model_name, n_splits, img_size, channels, lr, batch_size, classes, class_mode, epochs,
-                                     activation, actf, crossentropy, optimizer, backbone, rescale, augmentation,
+                                     activation, actf, crossentropy, optimizer, rescale, augmentation,
                                      rotation_range, height_shift_range, width_shift_range, horizontal_flip,
                                      normalized, split, segmented, foldno]],
                                    columns=['Model Name', 'Number of Splits', 'Image Size', 'Channels', 'Initial LR',
                                             'Batch Size', 'Classes', 'Class Mode', 'Epochs', 'Activation', 'Actf', 'Crossentropy',
-                                            'Optimizer', 'Backbone', 'Rescale', 'Implements Augmentation',
+                                            'Optimizer', 'Rescale', 'Implements Augmentation',
                                             'Rotation Range', 'Height Shift Range', 'Width Shift Range',
                                             'Horizontal Flip', 'Normalized', 'Split', 'Segmented', 'Number of Folds'])
 
