@@ -34,7 +34,7 @@ def main():
     valid_fold = valid_fold.drop(columns=['index'])
 
     # Build the model with specified configuration
-    model = build_model(config.BACKBONE, config.WEIGHTS, config.CLASSES, config.ACTIVATION, config.IMG_SIZE, config.CHANNELS, config.LEARNING_RATE, config.CROSSENTROPY)
+    model = build_model(config.WEIGHTS, config.CLASSES, config.ACTIVATION, config.IMG_SIZE, config.CHANNELS, config.LEARNING_RATE, config.CROSSENTROPY)
 
     # Create data augmentation generators for training and validation
     train_augment = create_augmentation_generator(config.ROTATION_RANGE, config.WIDTH_SHIFT_RANGE,
