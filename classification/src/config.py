@@ -66,10 +66,18 @@ SEGMENTED = 'Segmented'  # Label for processed segmentation data
 
 OUTPUT_PATH = 'classification/output/'  # Path to store training outputs, metrics, and models
 
-DATA_PATH = 'classification/data/'  # Path to data folder
+TRAIN_DATA_PATH = 'classification/data/training/'  # Path to data folder
 
-COVID_PATH = 'classification/data/covid/'  # Path to covid-19 image files
+TRAIN_COVID_PATH = 'classification/data/training/covid/'  # Path to covid-19 image files
 
-NORMAL_PATH = 'classification/data/normal/'  # Path to normal image files
+TRAIN_NORMAL_PATH = 'classification/data/training/normal/'  # Path to normal image files
 
-PNEU_PATH = 'classification/data/pneu'  # Path to viral pneumonia image files
+TRAIN_PNEU_PATH = 'classification/data/training/pneu'  # Path to viral pneumonia image files
+
+EVAL_DATA_PATH = 'classification/data/evaluation/'  # Path to data folder
+
+EVAL_COVID_PATH = 'classification/data/evaluation/covid/'  # Path to covid-19 image files
+
+EVAL_NORMAL_PATH = 'classification/data/evaluation/normal/'  # Path to normal image files
+
+EVAL_PNEU_PATH = 'classification/data/evaluation/pneu'  # Path to viral pneumonia image files
