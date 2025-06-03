@@ -24,13 +24,22 @@ The following three models were trained:
 
 ### Dataset Used for Classification Task
 
-For this thesis the dataset created by [1] was employed. It can be downloaded from here: [COVID-CT-MD: COVID-19 Computed Tomography (CT) Scan Dataset Applicable in Machine Learning and Deep Learning](https://figshare.com/collections/COVID-CT-MD_COVID-19_Computed_Tomography_CT_Scan_Dataset_Applicable_in_Machine_Learning_and_Deep_Learning/5129081)
+For the training of the models the dataset created by [1] was employed. It can be downloaded from here: [COVID-CT-MD: COVID-19 Computed Tomography (CT) Scan Dataset Applicable in Machine Learning and Deep Learning](https://figshare.com/collections/COVID-CT-MD_COVID-19_Computed_Tomography_CT_Scan_Dataset_Applicable_in_Machine_Learning_and_Deep_Learning/5129081)
 
 The dataset should be added here:
 
-- `clasification/data/covid` Add CT scans corresponding to patients with COVID-19.
-- `clasification/data/normal` Add CT scans corresponding to healthy individuals.
-- `clasification/data/pneu` Add CT scans corresponding to patients with Viral Pneumonia caused by other viruses.
+- `clasification/data/training/covid` Add CT scans corresponding to patients with COVID-19.
+- `clasification/data/training/normal` Add CT scans corresponding to healthy individuals.
+- `clasification/data/training/pneu` Add CT scans corresponding to patients with Viral Pneumonia caused by other viruses.
+</br></br>
+
+For the evaluation of the models the dataset created by [2] was employed.
+
+The dataset should be added here:
+
+- `clasification/data/evaluation/covid` Add CT scans corresponding to patients with COVID-19.
+- `clasification/data/evaluation/normal` Add CT scans corresponding to healthy individuals.
+- `clasification/data/evaluation/pneu` Add CT scans corresponding to patients with Viral Pneumonia caused by other viruses.
 </br></br>
 
 ## Segmentation Task
@@ -40,7 +49,7 @@ The code trains convolutional neural networks (CNNs) to segment COVID-19-related
 
 ### Models Trained
 
-The following three models were trained utilizing code found in [2]:
+The following three models were trained utilizing code found in [3]:
 
 - U-Net
 - U-Net with VGG16 as backbone
@@ -49,7 +58,7 @@ The following three models were trained utilizing code found in [2]:
 
 ### Dataset Used for Segmentation Task
 
-For this thesis the dataset created by [3] was employed. It can be downloaded from here: [COVID-19 CT Lung and Infection Segmentation Dataset](https://zenodo.org/records/3757476)
+For this thesis the dataset created by [4] was employed. It can be downloaded from here: [COVID-19 CT Lung and Infection Segmentation Dataset](https://zenodo.org/records/3757476)
 
 The dataset should be added here:
 
@@ -77,6 +86,8 @@ pip install -r requirements.txt
 
 [1] Afshar, P., Heidarian, S., Enshaei, N., Naderkhani, F., Rafiee, M. J., Oikonomou, A., Babaki Fard, F., Samimi, K., Plataniotis, K. N., & Mohammadi, A. (2021). *COVID-CT-MD, COVID-19 computed tomography scan dataset applicable in machine learning and deep learning*. Scientific Data, 8(1), 121. https://doi.org/10.1038/s41597-021-00900-3
 
-[2] Pavel Iakubovskii. *Segmentation Models*. GitHub repository, 2019. Available at: [https://github.com/qubvel/segmentation_models](https://github.com/qubvel/segmentation_models)
+[2] Zhang, K. et al., (2020). "Clinically Applicable AI System for Accurate Diagnosis, Quantitative Measurements, and Prognosis of COVID-19 Pneumonia Using Computed Tomography". Cell, 181(6), 1423-1433. https://doi.org/10.1016/j.cell.2020.04.045
 
-[3] Ma, J., Wang, Y., An, X., Ge, C., Yu, Z., Chen, J., Zhu, Q., Dong, G., He, J., He, Z., Cao, T., Zhu, Y., Nie, Z., & Yang, X. (2021). Towards Data-Efficient Learning: A Benchmark for COVID-19 CT Lung and Infection Segmentation. *Medical Physics*, 48(3), 1197–1210. https://doi.org/10.1002/mp.14676
+[3] Pavel Iakubovskii. *Segmentation Models*. GitHub repository, 2019. Available at: [https://github.com/qubvel/segmentation_models](https://github.com/qubvel/segmentation_models)
+
+[4] Ma, J., Wang, Y., An, X., Ge, C., Yu, Z., Chen, J., Zhu, Q., Dong, G., He, J., He, Z., Cao, T., Zhu, Y., Nie, Z., & Yang, X. (2021). Towards Data-Efficient Learning: A Benchmark for COVID-19 CT Lung and Infection Segmentation. *Medical Physics*, 48(3), 1197–1210. https://doi.org/10.1002/mp.14676
