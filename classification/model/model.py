@@ -3,7 +3,7 @@ import tensorflow as tf
 from tensorflow.keras.callbacks import ModelCheckpoint
 
 # Load a model with specified configuration and compile it
-def build_model(backbone, weights, classes, activation, img_size, channels, lr, crossentropy):
+def build_model(weights, classes, activation, img_size, channels, lr, crossentropy):
 
     base_model = tf.keras.applications.DenseNet121(include_top=False, weights=weights,
                                                        input_shape=(img_size, img_size, channels))
