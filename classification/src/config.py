@@ -20,7 +20,7 @@ NORMAL_CLASS = "Normal" # Label of the normal class
 
 PNEU_CLASS = "Viral Pneumonia" # Label of the viral pneumonia class
 
-EPOCHS = 1  # Number of training epochs
+EPOCHS = 20  # Number of training epochs
 
 ACTIVATION = 'softmax'  # Final activation function for model output
 
