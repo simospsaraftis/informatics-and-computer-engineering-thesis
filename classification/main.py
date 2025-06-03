@@ -1,8 +1,8 @@
 import pandas as pd
 from classification.src import config
-from classification.src.data_loader import create_lists, split_data, load_fold, create_augmentation_generator, create_generator
+from classification.src.data_loader import create_lists, create_test_lists, split_data, load_fold, create_augmentation_generator, create_generator
 from sklearn.metrics import confusion_matrix
-from models.model import build_model, train_model, evaluate_model, predict_images
+from models.model import build_model, train_model, predict_images
 from src.utils import make_dirs, plot_acc_loss, save_metrics, plot_confusion_matrix, plot_roc_curve, apply_gradcam
 
 def main():
@@ -74,10 +74,55 @@ def main():
     save_metrics(val_image_generator, y_pred, history, config.FOLDNO, config.OUTPUT_PATH, config.MODEL_NAME, config.N_SPLITS, config.IMG_SIZE,
                        config.CHANNELS,
                        config.LEARNING_RATE, config.BATCH_SIZE, config.CLASSES, config.CLASS_MODE, config.EPOCHS, config.ACTIVATION,
-                       config.ACTF, config.CROSSENTROPY, config.OPTIMIZER, config.RESCALE,
+                       config.ACTF, config.CROSSENTROPY, config.OPTIMIZER, config.BACKBONE, config.RESCALE,
                        config.AUGMENTATION, config.ROTATION_RANGE, config.HEIGHT_SHIFT_RANGE,
                        config.WIDTH_SHIFT_RANGE, config.HORIZONTAL_FLIP, config.NORMALIZED, config.SPLIT,
                        config.SEGMENTED)
+
+    # Get organized DataFrames for different dataset classes
+    test_covid_df, test_normal_df = create_test_lists(config.EVAL_COVID_PATH,config.EVAL_NORMAL_PATH, config.EVAL_PNEU_PATH, config.COVID_CLASS, config.NORMAL_CLASS, config.PNEU_CLASS)
+
+    # Concatenate data
+    test_data = pd.concat([test_covid_df, test_normal_df])
+
+    test_data = test_data.reset_index()
+    test_data = test_data.drop(columns=['index'])
+
+    test_augment = create_augmentation_generator(config.ROTATION_RANGE, config.WIDTH_SHIFT_RANGE,
+                                                config.HEIGHT_SHIFT_RANGE, config.HORIZONTAL_FLIP, "test")
+
+    test_image_generator = create_generator(test_augment, test_data, config.BATCH_SIZE,
+                                           config.IMG_SIZE, False, config.CLASS_MODE)
+
+    # Predict on validation set and save results
+    y_pred, prob = predict_images(model, config.OUTPUT_PATH, config.MODEL_NAME, config.FOLDNO, test_image_generator)
+
+    # Calculate confusion matrix
+    cm = confusion_matrix(test_image_generator.classes, y_pred)
+
+    # Plot and save confusion matrix
+    plot_confusion_matrix(cm, config.MODEL_NAME, config.FOLDNO, config.COVID_CLASS, config.NORMAL_CLASS,
+                          config.OUTPUT_PATH, "test")
+
+    # Plot and save roc-curve
+    plot_roc_curve(test_image_generator, prob, config.FOLDNO, config.MODEL_NAME, config.OUTPUT_PATH, "test")
+
+    # Apply GRAD-CAM to validation images
+    apply_gradcam(model, test_data, test_augment, config.MODEL_NAME, config.IMG_SIZE, config.FOLDNO, config.COVID_CLASS,
+                  config.NORMAL_CLASS, config.OUTPUT_PATH, config.SEED, "test")
+    apply_gradcam(model, test_data, test_augment, config.MODEL_NAME, config.IMG_SIZE, config.FOLDNO,
+                  config.NORMAL_CLASS, config.COVID_CLASS, config.OUTPUT_PATH, config.SEED, "test")
+
+    # Save training metrics, hyperparameters, and history
+    save_metrics(test_image_generator, y_pred, history, config.FOLDNO, config.OUTPUT_PATH, config.MODEL_NAME,
+                 config.N_SPLITS, config.IMG_SIZE,
+                 config.CHANNELS,
+                 config.LEARNING_RATE, config.BATCH_SIZE, config.CLASSES, config.CLASS_MODE, config.EPOCHS,
+                 config.ACTIVATION,
+                 config.ACTF, config.CROSSENTROPY, config.OPTIMIZER, config.RESCALE,
+                 config.AUGMENTATION, config.ROTATION_RANGE, config.HEIGHT_SHIFT_RANGE,
+                 config.WIDTH_SHIFT_RANGE, config.HORIZONTAL_FLIP, config.NORMALIZED, config.SPLIT,
+                 config.SEGMENTED)
 
 if __name__ == "__main__":
     main()
