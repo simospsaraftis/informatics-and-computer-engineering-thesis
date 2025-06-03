@@ -42,6 +42,9 @@ def create_test_lists(covid_path, normal_path, pneu_path, covid_class, normal_cl
     normallist = os.listdir(normal_path)
     normallist.sort()
 
+    #pneulist = os.listdir(pneu_path)
+    #pneulist.sort()
+
     covid_df = pd.DataFrame({'images': covidlist, 'target': covid_class})
     covid_df['image_path'] = covid_path + covid_df['images']
 
