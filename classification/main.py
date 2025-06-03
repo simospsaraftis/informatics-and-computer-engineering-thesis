@@ -74,7 +74,7 @@ def main():
     save_metrics(val_image_generator, y_pred, history, config.FOLDNO, config.OUTPUT_PATH, config.MODEL_NAME, config.N_SPLITS, config.IMG_SIZE,
                        config.CHANNELS,
                        config.LEARNING_RATE, config.BATCH_SIZE, config.CLASSES, config.CLASS_MODE, config.EPOCHS, config.ACTIVATION,
-                       config.ACTF, config.CROSSENTROPY, config.OPTIMIZER, config.BACKBONE, config.RESCALE,
+                       config.ACTF, config.CROSSENTROPY, config.OPTIMIZER, config.RESCALE,
                        config.AUGMENTATION, config.ROTATION_RANGE, config.HEIGHT_SHIFT_RANGE,
                        config.WIDTH_SHIFT_RANGE, config.HORIZONTAL_FLIP, config.NORMALIZED, config.SPLIT,
                        config.SEGMENTED)
