@@ -32,8 +32,6 @@ CROSSENTROPY = 'categorical_crossentropy'  # Loss function
 
 OPTIMIZER = 'Adam'  # Optimizer used in training
 
-BACKBONE = 'densenet121'  # Backbone network architecture
-
 WEIGHTS = 'imagenet'  # Pretrained weights to use for backbone
 
 SAVE_BEST_ONLY = True  # Whether to save only the best model weights
@@ -66,18 +64,18 @@ SEGMENTED = 'Segmented'  # Label for processed segmentation data
 
 OUTPUT_PATH = 'classification/output/'  # Path to store training outputs, metrics, and models
 
-TRAIN_DATA_PATH = 'classification/data/training/'  # Path to data folder
+TRAIN_DATA_PATH = 'classification/data/training/'  # Path to training data folder
 
-TRAIN_COVID_PATH = 'classification/data/training/covid/'  # Path to covid-19 image files
+TRAIN_COVID_PATH = 'classification/data/training/covid/'  # Path to covid-19 image files for training
 
-TRAIN_NORMAL_PATH = 'classification/data/training/normal/'  # Path to normal image files
+TRAIN_NORMAL_PATH = 'classification/data/training/normal/'  # Path to normal image files for training
 
-TRAIN_PNEU_PATH = 'classification/data/training/pneu'  # Path to viral pneumonia image files
+TRAIN_PNEU_PATH = 'classification/data/training/pneu'  # Path to viral pneumonia image files for training
 
-EVAL_DATA_PATH = 'classification/data/evaluation/'  # Path to data folder
+EVAL_DATA_PATH = 'classification/data/evaluation/'  # Path to evaluation data folder
 
-EVAL_COVID_PATH = 'classification/data/evaluation/covid/'  # Path to covid-19 image files
+EVAL_COVID_PATH = 'classification/data/evaluation/covid/'  # Path to covid-19 image files for evaluation
 
-EVAL_NORMAL_PATH = 'classification/data/evaluation/normal/'  # Path to normal image files
+EVAL_NORMAL_PATH = 'classification/data/evaluation/normal/'  # Path to normal image files for evaluation
 
-EVAL_PNEU_PATH = 'classification/data/evaluation/pneu'  # Path to viral pneumonia image files
+EVAL_PNEU_PATH = 'classification/data/evaluation/pneu'  # Path to viral pneumonia image files for evaluation
